@@ -1,0 +1,61 @@
+Source: haskell-filemanip
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Iain Lane <laney@ubuntu.com>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8.4.3),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-unix-compat-dev,
+ libghc-unix-compat-prof,
+Build-Depends-Indep: ghc-doc, libghc-unix-compat-doc
+Standards-Version: 4.5.0
+Homepage: https://github.com/bos/filemanip
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-filemanip
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-filemanip]
+
+Package: libghc-filemanip-dev
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: expressive file and directory manipulation for Haskell${haskell:ShortBlurb}
+ FileManip is a Haskell library for working with files and directories.
+ Includes code for pattern matching, finding files, modifying file contents,
+ and more.
+ .
+ This package contains the development files.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-filemanip-prof
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Provides: ${haskell:Provides}
+Description: expressive file and directory manipulation for Haskell${haskell:ShortBlurb}
+ FileManip is a Haskell library for working with files and directories.
+ Includes code for pattern matching, finding files, modifying file contents,
+ and more.
+ .
+ This package contains the profiling libraries.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-filemanip-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Description: expressive file and directory manipulation for Haskell${haskell:ShortBlurb}
+ FileManip is a Haskell library for working with files and directories.
+ Includes code for pattern matching, finding files, modifying file contents,
+ and more.
+ .
+ This package contains the hyperlinked html documentation.
+ .
+ ${haskell:Blurb}
